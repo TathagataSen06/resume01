@@ -948,7 +948,7 @@
       <div class="contact-items">
         <div class="contact-item">
           <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg>
-          +91 84503 24860
+          +91 84520 34860
         </div>
         <div class="contact-item">
           <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1074,10 +1074,20 @@ function handleContact(e){
   const msg=document.getElementById('c-msg').value.trim();
   const btn=document.getElementById('c-btn');
   btn.disabled=true; btn.querySelector('span').textContent='Opening…';
-  window.open('mailto:sen.tathagata5@gmail.com?subject='+encodeURIComponent('Portfolio — '+name)+'&body='+encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg));
+  
+  // Use window.location.href to avoid popup blockers for mailto links
+  window.location.href = 'mailto:sen.tathagata5@gmail.com?subject='+encodeURIComponent('Portfolio — '+name)+'&body='+encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
+  
   setTimeout(()=>{
     const ok=document.getElementById('form-ok');
-    ok.style.display='block'; ok.textContent='✓ Email client opened.';
+    ok.style.display='block'; 
+    ok.style.color='var(--cyan)';
+    ok.style.marginTop='14px';
+    ok.style.fontFamily='var(--mono)';
+    ok.style.fontSize='10px';
+    ok.style.letterSpacing='0.1em';
+    ok.textContent='✓ EMAIL CLIENT OPENED';
+    
     btn.disabled=false; btn.querySelector('span').textContent='Send Message';
     e.target.reset();
   },800);
