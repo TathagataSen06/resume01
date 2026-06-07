@@ -1347,6 +1347,16 @@
       color: var(--cyan);
     }
 
+    /* Architecture Diagram */
+    .arch-diagram {
+      height: 500px;
+      margin-top: 40px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      border-radius: 4px;
+      position: relative;
+    }
+
     /* ===== ACHIEVEMENTS ===== */
     .ach-grid {
       display: grid;
@@ -1894,7 +1904,7 @@
               </svg>
               LinkedIn
             </a>
-            <a href="https://leetcode.com/dedsora/" target="_blank" rel="noopener" class="about-link">LC — Knight
+            <a href="https://leetcode.com/uptownfunk01/" target="_blank" rel="noopener" class="about-link">LC — Knight
               1876</a>
             <a href="mailto:sen.tathagata5@gmail.com" class="about-link">Email</a>
           </div>
@@ -2008,7 +2018,7 @@
     </section>
 
     <!-- ======== ARCHITECTURE ======== -->
-    <section id="architecture">
+    <section id="architecture" class="section">
       <div class="arch-header reveal">
         <div class="section-kicker">03 — Architecture</div>
         <h2 class="section-title">SaanchaarSetu <em>Pipeline</em></h2>
@@ -2679,15 +2689,13 @@
     })();
 
     // Theme Toggling Logic
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggles = document.querySelectorAll('.theme-toggle');
-      themeToggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-          const newTheme = isDark ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-        });
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    themeToggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const newTheme = isDark ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
       });
     });
   </script>
