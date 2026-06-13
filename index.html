@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Tathagata Sen — Distributed AI Systems Engineer. Interoperability middleware, real-time ML pipelines, multi-agent orchestration. CS @ BIT Mesra.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#faf9f7">
   <title>Tathagata Sen — Distributed AI Systems Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <script>
@@ -233,6 +235,11 @@
       transition: color var(--tf);
     }
 
+    .nav-link:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -269,9 +276,16 @@
       transition: all var(--tf);
     }
 
-    .nav-resume:hover {
+    .nav-resume:hover,
+    .nav-resume:focus {
       background: var(--gold);
       color: var(--btn-text);
+      outline: none;
+    }
+
+    .nav-resume:focus {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
     }
 
     .theme-toggle {
@@ -288,6 +302,11 @@
     .theme-toggle:hover {
       color: var(--gold);
       background: rgba(196, 164, 92, 0.06);
+    }
+
+    .theme-toggle:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
     .theme-toggle svg {
@@ -568,6 +587,11 @@
       transition: all var(--tf);
     }
 
+    .btn-primary:focus {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+
     .btn-primary::before {
       content: '';
       position: absolute;
@@ -586,6 +610,11 @@
       z-index: 1;
     }
 
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
     .btn-ghost {
       display: inline-flex;
       align-items: center;
@@ -599,6 +628,11 @@
       text-transform: uppercase;
       border-radius: 2px;
       transition: all var(--tf);
+    }
+
+    .btn-ghost:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
     .btn-ghost:hover {
@@ -839,6 +873,7 @@
       border: 1px solid var(--border);
       filter: grayscale(20%);
       transition: filter var(--t);
+      loading: lazy;
     }
 
     .about-photo:hover {
@@ -895,6 +930,11 @@
       padding: 7px 14px;
       border-radius: 2px;
       transition: all var(--tf);
+    }
+
+    .about-link:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
     .about-link:hover {
@@ -980,7 +1020,8 @@
       transition: all var(--tf);
     }
 
-    .pill:hover {
+    .pill:hover,
+    .pill:focus {
       border-color: var(--cyan);
       color: var(--text);
       background: var(--cyan-dim);
@@ -1472,6 +1513,11 @@
       color: var(--gold-2);
     }
 
+    .contact-email:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
     .contact-info p {
       font-family: var(--serif);
       font-size: 15px;
@@ -1525,6 +1571,11 @@
       background: rgba(196, 164, 92, .06);
     }
 
+    .social-btn:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -1562,6 +1613,7 @@
     .form-input:focus,
     .form-ta:focus {
       border-color: var(--cyan);
+      box-shadow: 0 1px 0 var(--cyan);
     }
 
     .form-input::placeholder,
@@ -1577,6 +1629,14 @@
       font-family: var(--mono);
       font-size: 10px;
       color: var(--cyan);
+      display: none;
+      letter-spacing: .1em;
+    }
+
+    #form-error {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--red);
       display: none;
       letter-spacing: .1em;
     }
@@ -1623,6 +1683,11 @@
       color: var(--gold);
     }
 
+    .footer-link:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
     /* ===== BTT ===== */
     #btt {
       position: fixed;
@@ -1653,6 +1718,11 @@
       color: var(--gold);
     }
 
+    #btt:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+
     /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
@@ -1668,6 +1738,11 @@
       background: var(--text-2);
       border-radius: 1px;
       transition: all .3s;
+    }
+
+    .hamburger:focus {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
     @media (max-width: 900px) {
@@ -1718,7 +1793,7 @@
   </div>
 
   <!-- NAV -->
-  <nav id="nav">
+  <nav id="nav" role="navigation" aria-label="Main navigation">
     <a href="#" class="nav-brand"><strong>Tathagata Sen</strong> — <em style="font-style:italic;color:var(--text-2)">AI
         Systems</em></a>
     <div class="nav-links">
@@ -1731,11 +1806,11 @@
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
-      <button class="theme-toggle desktop" aria-label="Toggle theme">
-        <svg class="icon-moon" viewBox="0 0 24 24">
+      <button class="theme-toggle desktop" aria-label="Toggle dark/light theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -1747,17 +1822,17 @@
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
-      <a href="javascript:void(0)" onclick="downloadResume()" class="nav-resume">Resume ↓</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="nav-resume" onclick="downloadResume()" aria-label="Download resume">Resume ↓</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <div class="mobile-menu" id="mob-menu">
-    <button class="theme-toggle mobile" aria-label="Toggle theme" style="margin-bottom: 24px; transform: scale(1.5);">
-      <svg class="icon-moon" viewBox="0 0 24 24">
+  <div class="mobile-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
+    <button class="theme-toggle mobile" aria-label="Toggle dark/light theme" style="margin-bottom: 24px; transform: scale(1.5);">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="5"></circle>
         <line x1="12" y1="1" x2="12" y2="3"></line>
         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -1782,30 +1857,30 @@
 
     <!-- ======== HERO ======== -->
     <section id="hero">
-      <canvas class="hero-canvas" id="hero-canvas"></canvas>
+      <canvas class="hero-canvas" id="hero-canvas" role="img" aria-label="Animated background topology network"></canvas>
 
       <div class="hero-sysbox">
         <div class="sysbox-panel">
           <div class="sysbox-title">System Status</div>
           <div class="sysbox-row">
             <span class="sysbox-label">Kafka Streams</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot"></span>ACTIVE</span>
+            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>ACTIVE</span>
           </div>
           <div class="sysbox-row">
             <span class="sysbox-label">Inference Layer</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot"></span>RUNNING</span>
+            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>RUNNING</span>
           </div>
           <div class="sysbox-row">
             <span class="sysbox-label">Semantic Mapping</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot"></span>STABLE</span>
+            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>STABLE</span>
           </div>
           <div class="sysbox-row">
             <span class="sysbox-label">RAG Agents</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot"></span>ONLINE</span>
+            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>ONLINE</span>
           </div>
           <div class="sysbox-row">
             <span class="sysbox-label">Propagation</span>
-            <span class="sysbox-status warn"><span class="sysbox-dot"></span><span id="latency-val">4.7s</span></span>
+            <span class="sysbox-status warn"><span class="sysbox-dot" aria-hidden="true"></span><span id="latency-val">4.7s</span></span>
           </div>
           <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
             <div class="sysbox-metric">Last sync: <span id="sync-time">0.0s ago</span></div>
@@ -1816,7 +1891,7 @@
 
       <div class="hero-content">
         <div class="hero-status">
-          <div class="status-pulse"></div>
+          <div class="status-pulse" aria-hidden="true"></div>
           Available — Internships · Summer 2027
         </div>
 
@@ -1831,7 +1906,7 @@
             browser-native ML infrastructure.
           </p>
           <div class="hero-ctas">
-            <a href="#projects" class="btn-primary"><span>View Systems</span><span>→</span></a>
+            <a href="#projects" class="btn-primary"><span>View Systems</span><span aria-hidden="true">→</span></a>
             <a href="#contact" class="btn-ghost">Let's Talk</a>
           </div>
         </div>
@@ -1875,10 +1950,10 @@
       </div>
       <div class="about-grid">
         <div class="reveal">
-          <img src="https://i.postimg.cc/x84TyCgD/Screenshot-2025-07-24-224412.png" alt="Tathagata Sen"
-            class="about-photo" onerror="this.src='https://placehold.co/280x370/111009/c4a45c?text=TS&font=serif'">
+          <img src="https://i.postimg.cc/x84TyCgD/Screenshot-2025-07-24-224412.png" alt="Portrait of Tathagata Sen"
+            class="about-photo" loading="lazy" onerror="this.src='https://placehold.co/280x370/111009/c4a45c?text=TS&font=serif'">
           <div class="about-caption">
-            <span class="live-dot"></span>
+            <span class="live-dot" aria-hidden="true"></span>
             Available · Mumbai, India · CGPA 8.12
           </div>
         </div>
@@ -1890,22 +1965,21 @@
             platform, is incubated at Bhamashah Techno Hub.</p>
           <p>Seeking Software Engineering, AI Infrastructure, Backend, or Full-Stack internships for Summer 2027.</p>
           <div class="about-links">
-            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener" class="about-link">
-              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="about-link">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener" class="about-link">
-              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer" class="about-link">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
               LinkedIn
             </a>
-            <a href="https://leetcode.com/uptownfunk01/" target="_blank" rel="noopener" class="about-link">LC — Knight
-              1876</a>
+            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="about-link">LC — Knight 1876</a>
             <a href="mailto:sen.tathagata5@gmail.com" class="about-link">Email</a>
           </div>
         </div>
@@ -1923,94 +1997,94 @@
         <div class="skill-card reveal">
           <div class="skill-cat">Languages</div>
           <div class="skill-pills">
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python logo">
               Python</span>
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo">
               Java</span>
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart logo">
               Dart</span>
-            <span class="pill"><img
+            <span class="pill" tabindex="0"><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                alt=""> JavaScript</span>
-            <span class="pill">SQL</span>
+                alt="JavaScript logo"> JavaScript</span>
+            <span class="pill" tabindex="0">SQL</span>
           </div>
         </div>
 
         <div class="skill-card reveal r1">
           <div class="skill-cat">AI / ML Systems</div>
           <div class="skill-pills">
-            <span class="pill"><img
+            <span class="pill" tabindex="0"><img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
-                alt=""> TensorFlow.js</span>
-            <span class="pill">Scikit-learn</span>
-            <span class="pill">RAG Pipelines</span>
-            <span class="pill">Agentic AI</span>
-            <span class="pill">NLP / TF-IDF</span>
-            <span class="pill">K-Means / MLP</span>
-            <span class="pill">Groq / Llama 3</span>
-            <span class="pill">Sentence Transformers</span>
+                alt="TensorFlow logo"> TensorFlow.js</span>
+            <span class="pill" tabindex="0">Scikit-learn</span>
+            <span class="pill" tabindex="0">RAG Pipelines</span>
+            <span class="pill" tabindex="0">Agentic AI</span>
+            <span class="pill" tabindex="0">NLP / TF-IDF</span>
+            <span class="pill" tabindex="0">K-Means / MLP</span>
+            <span class="pill" tabindex="0">Groq / Llama 3</span>
+            <span class="pill" tabindex="0">Sentence Transformers</span>
           </div>
         </div>
 
         <div class="skill-card reveal r2">
           <div class="skill-cat">Backend & Infra</div>
           <div class="skill-pills">
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI logo">
               FastAPI</span>
-            <span class="pill">Apache Kafka</span>
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="">
+            <span class="pill" tabindex="0">Apache Kafka</span>
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis logo">
               Redis</span>
-            <span class="pill">pgvector</span>
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="">
+            <span class="pill" tabindex="0">pgvector</span>
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase logo">
               Firebase</span>
-            <span class="pill">Debezium CDC</span>
-            <span class="pill">GCP Functions</span>
-            <span class="pill">Dead Letter Queue</span>
+            <span class="pill" tabindex="0">Debezium CDC</span>
+            <span class="pill" tabindex="0">GCP Functions</span>
+            <span class="pill" tabindex="0">Dead Letter Queue</span>
           </div>
         </div>
 
         <div class="skill-card reveal">
           <div class="skill-cat">Frontend & Mobile</div>
           <div class="skill-pills">
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React logo">
               React</span>
-            <span class="pill"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="">
+            <span class="pill" tabindex="0"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter logo">
               Flutter</span>
-            <span class="pill">Tailwind CSS</span>
-            <span class="pill">Chart.js</span>
-            <span class="pill">Canvas API</span>
+            <span class="pill" tabindex="0">Tailwind CSS</span>
+            <span class="pill" tabindex="0">Chart.js</span>
+            <span class="pill" tabindex="0">Canvas API</span>
           </div>
         </div>
 
         <div class="skill-card reveal r1">
           <div class="skill-cat">Tools</div>
           <div class="skill-pills">
-            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                alt=""> Git</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">Twilio API</span>
-            <span class="pill">Android SDK</span>
-            <span class="pill">VS Code</span>
+            <span class="pill" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                alt="Git logo"> Git</span>
+            <span class="pill" tabindex="0">MySQL</span>
+            <span class="pill" tabindex="0">Twilio API</span>
+            <span class="pill" tabindex="0">Android SDK</span>
+            <span class="pill" tabindex="0">VS Code</span>
           </div>
         </div>
 
         <div class="skill-card reveal r2">
           <div class="skill-cat">CS Fundamentals</div>
           <div class="skill-pills">
-            <span class="pill">DSA — LC Knight</span>
-            <span class="pill">OOP</span>
-            <span class="pill">REST APIs</span>
-            <span class="pill">OS</span>
-            <span class="pill">Neural Networks</span>
-            <span class="pill">Distributed Systems</span>
+            <span class="pill" tabindex="0">DSA — LC Knight</span>
+            <span class="pill" tabindex="0">OOP</span>
+            <span class="pill" tabindex="0">REST APIs</span>
+            <span class="pill" tabindex="0">OS</span>
+            <span class="pill" tabindex="0">Neural Networks</span>
+            <span class="pill" tabindex="0">Distributed Systems</span>
           </div>
         </div>
 
@@ -2029,7 +2103,7 @@
         </p>
       </div>
       <div class="arch-diagram">
-        <canvas id="arch-canvas" style="width:100%;height:100%;"></canvas>
+        <canvas id="arch-canvas" style="width:100%;height:100%;" role="img" aria-label="SaanchaarSetu pipeline architecture diagram"></canvas>
       </div>
     </section>
 
@@ -2078,12 +2152,12 @@
       <div class="proj-row proj-flagship reveal">
         <div class="proj-num">01</div>
         <div>
-          <div class="flagship-badge"><span class="flagship-badge-dot"></span> Flagship System</div>
+          <div class="flagship-badge"><span class="flagship-badge-dot" aria-hidden="true"></span> Flagship System</div>
           <div class="proj-name">
             SaanchaarSetu
-            <a href="https://github.com/TathagataSen06/SanchaarSetu" target="_blank" rel="noopener" class="proj-gh"
-              onclick="event.stopPropagation()">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06/SanchaarSetu" target="_blank" rel="noopener noreferrer" class="proj-gh"
+              onclick="event.stopPropagation()" aria-label="View SaanchaarSetu on GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
@@ -2101,17 +2175,17 @@
           <div class="pipeline-mini">
             <div class="pipeline-row" id="pipeline-row">
               <div class="pipe-node lit">Source Event</div>
-              <div class="pipe-arrow lit">→</div>
+              <div class="pipe-arrow lit" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn1">Kafka Ingest</div>
-              <div class="pipe-arrow" id="pa1">→</div>
+              <div class="pipe-arrow" id="pa1" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn2">PII Scrub</div>
-              <div class="pipe-arrow" id="pa2">→</div>
+              <div class="pipe-arrow" id="pa2" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn3">Semantic Map</div>
-              <div class="pipe-arrow" id="pa3">→</div>
+              <div class="pipe-arrow" id="pa3" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn4">Redis Gate</div>
-              <div class="pipe-arrow" id="pa4">→</div>
+              <div class="pipe-arrow" id="pa4" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn5">Dept. APIs</div>
-              <div class="pipe-arrow" id="pa5">→</div>
+              <div class="pipe-arrow" id="pa5" aria-hidden="true">→</div>
               <div class="pipe-node" id="pn6">Audit Log</div>
             </div>
           </div>
@@ -2136,9 +2210,9 @@
         <div>
           <div class="proj-name">
             Digital Twin Market Engine
-            <a href="https://github.com/TathagataSen06/digital-twin" target="_blank" rel="noopener" class="proj-gh"
-              onclick="event.stopPropagation()">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06/digital-twin" target="_blank" rel="noopener noreferrer" class="proj-gh"
+              onclick="event.stopPropagation()" aria-label="View Digital Twin Market Engine on GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
@@ -2166,9 +2240,9 @@
         <div>
           <div class="proj-name">
             Agentic RFP Platform
-            <a href="https://github.com/TathagataSen06/rfp" target="_blank" rel="noopener" class="proj-gh"
-              onclick="event.stopPropagation()">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06/rfp" target="_blank" rel="noopener noreferrer" class="proj-gh"
+              onclick="event.stopPropagation()" aria-label="View Agentic RFP Platform on GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
@@ -2196,9 +2270,9 @@
         <div>
           <div class="proj-name">
             SaviHer
-            <a href="https://github.com/TathagataSen06/saviher" target="_blank" rel="noopener" class="proj-gh"
-              onclick="event.stopPropagation()">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06/saviher" target="_blank" rel="noopener noreferrer" class="proj-gh"
+              onclick="event.stopPropagation()" aria-label="View SaviHer on GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
@@ -2229,7 +2303,7 @@
       </div>
       <div class="ach-grid">
         <div class="ach-card reveal">
-          <div class="ach-icon">🏆</div>
+          <div class="ach-icon" aria-hidden="true">🏆</div>
           <div class="ach-org">AI FOR BHARAT · PAN IIT · May 2026</div>
           <div class="ach-title">Hackathon Prize Winner</div>
           <div class="ach-desc">SaanchaarSetu — interoperability middleware connecting Karnataka's Single Window System
@@ -2237,7 +2311,7 @@
           <div class="ach-badge">₹1,00,000</div>
         </div>
         <div class="ach-card reveal r1">
-          <div class="ach-icon">⚔</div>
+          <div class="ach-icon" aria-hidden="true">⚔</div>
           <div class="ach-org">LeetCode · Competitive Programming</div>
           <div class="ach-title">Knight Rank · 1876 Peak Rating</div>
           <div class="ach-desc">450+ algorithmic and data structure problems across competitive programming domains.
@@ -2245,7 +2319,7 @@
           <div class="ach-badge">450+ Solved</div>
         </div>
         <div class="ach-card reveal r2">
-          <div class="ach-icon">🚀</div>
+          <div class="ach-icon" aria-hidden="true">🚀</div>
           <div class="ach-org">Bhamashah Techno Hub · iSTART · 2024</div>
           <div class="ach-title">Startup Incubation — SaviHer</div>
           <div class="ach-desc">Selected for incubation at Bhamashah Techno Hub, Jaipur. Application submitted to iSTART
@@ -2253,7 +2327,7 @@
           <div class="ach-badge">Incubated</div>
         </div>
         <div class="ach-card reveal r3">
-          <div class="ach-icon">📊</div>
+          <div class="ach-icon" aria-hidden="true">📊</div>
           <div class="ach-org">ML Challenge 2025 · Global Competition</div>
           <div class="ach-title">Top ~2000 / 8000+ Teams</div>
           <div class="ach-desc">Hybrid ensemble (Random Forest + Gradient Boosting + MLP) with advanced NLP feature
@@ -2272,7 +2346,7 @@
       <div class="contact-grid">
         <div class="reveal">
           <a href="mailto:sen.tathagata5@gmail.com" class="contact-email">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
@@ -2282,14 +2356,14 @@
             full-stack engineering internships for Summer 2027.</p>
           <div class="contact-items">
             <div class="contact-item">
-              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z" />
               </svg>
               +91 84520 34860
             </div>
             <div class="contact-item">
-              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
@@ -2297,49 +2371,53 @@
             </div>
           </div>
           <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener" class="social-btn">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener" class="social-btn">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
-            <a href="https://leetcode.com/dedsora/" target="_blank" rel="noopener" class="social-btn">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LeetCode">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 5.878l-2.727 2.727a1.374 1.374 0 0 0 0 1.942l2.727 2.727 5.406 5.406a1.374 1.374 0 0 0 1.942 0l2.727-2.727 5.406-5.406a1.374 1.374 0 0 0 0-1.942l-2.727-2.727L14.444.438A1.374 1.374 0 0 0 13.483 0z" />
               </svg>
             </a>
           </div>
           <div style="margin-top:28px">
-            <a href="javascript:void(0)" onclick="downloadResume()" class="btn-primary"><span>Download
-                Resume</span><span>↓</span></a>
+            <button onclick="downloadResume()" class="btn-primary"><span>Download
+                Resume</span><span aria-hidden="true">↓</span></button>
           </div>
         </div>
 
         <div class="reveal r1">
-          <form class="contact-form" onsubmit="handleContact(event)">
+          <form class="contact-form" onsubmit="handleContact(event)" novalidate>
             <div class="form-grp">
-              <label class="form-label" for="c-name">Name</label>
-              <input class="form-input" id="c-name" type="text" placeholder="Your name" required>
+              <label class="form-label" for="c-name">Name *</label>
+              <input class="form-input" id="c-name" type="text" placeholder="Your name" required aria-required="true">
+              <span id="name-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
             <div class="form-grp">
-              <label class="form-label" for="c-email">Email</label>
-              <input class="form-input" id="c-email" type="email" placeholder="your@email.com" required>
+              <label class="form-label" for="c-email">Email *</label>
+              <input class="form-input" id="c-email" type="email" placeholder="your@email.com" required aria-required="true">
+              <span id="email-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
             <div class="form-grp">
-              <label class="form-label" for="c-msg">Message</label>
+              <label class="form-label" for="c-msg">Message *</label>
               <textarea class="form-ta" id="c-msg" placeholder="Tell me about your project or opportunity…"
-                required></textarea>
+                required aria-required="true"></textarea>
+              <span id="msg-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
-            <button type="submit" class="btn-primary" id="c-btn" style="width:100%;justify-content:center"><span>Send
-                Message</span><span>→</span></button>
-            <p id="form-ok"></p>
+            <button type="submit" class="btn-primary" id="c-btn" style="width:100%;justify-content:center"><span id="btn-text">Send
+                Message</span><span aria-hidden="true">→</span></button>
+            <p id="form-ok" role="status" aria-live="polite"></p>
+            <p id="form-error" role="alert" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -2350,15 +2428,15 @@
   <footer>
     <span class="footer-copy">© 2026 Tathagata Sen — Precision-built.</span>
     <div class="footer-links">
-      <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener" class="footer-link">GitHub</a>
-      <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener"
+      <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer"
         class="footer-link">LinkedIn</a>
       <a href="mailto:sen.tathagata5@gmail.com" class="footer-link">Email</a>
     </div>
   </footer>
 
   <button id="btt" aria-label="Back to top">
-    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
       <path d="m18 15-6-6-6 6" />
     </svg>
   </button>
@@ -2416,44 +2494,133 @@
     // ===== MOBILE MENU =====
     const hamburger = document.getElementById('hamburger');
     const mobMenu = document.getElementById('mob-menu');
-    hamburger.addEventListener('click', () => mobMenu.classList.toggle('open'));
-    mobMenu.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => mobMenu.classList.remove('open')));
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    mobMenu.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+      mobMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }));
 
     // ===== BTT =====
     document.getElementById('btt').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // ===== CONTACT =====
-    function handleContact(e) {
-      e.preventDefault();
-      const name = document.getElementById('c-name').value.trim();
-      const email = document.getElementById('c-email').value.trim();
-      const msg = document.getElementById('c-msg').value.trim();
-      const btn = document.getElementById('c-btn');
-      btn.disabled = true; btn.querySelector('span').textContent = 'Opening…';
-
-      // Use window.location.href to avoid popup blockers for mailto links
-      window.location.href = 'mailto:sen.tathagata5@gmail.com?subject=' + encodeURIComponent('Portfolio — ' + name) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + msg);
-
-      setTimeout(() => {
-        const ok = document.getElementById('form-ok');
-        ok.style.display = 'block';
-        ok.style.color = 'var(--cyan)';
-        ok.style.marginTop = '14px';
-        ok.style.fontFamily = 'var(--mono)';
-        ok.style.fontSize = '10px';
-        ok.style.letterSpacing = '0.1em';
-        ok.textContent = '✓ EMAIL CLIENT OPENED';
-
-        btn.disabled = false; btn.querySelector('span').textContent = 'Send Message';
-        e.target.reset();
-      }, 800);
+    // ===== EMAIL VALIDATION =====
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
     }
 
-    // ===== RESUME =====
+    function validateName(name) {
+      return name.trim().length >= 2;
+    }
+
+    function validateMessage(msg) {
+      return msg.trim().length >= 10;
+    }
+
+    // ===== CONTACT FORM =====
+    function handleContact(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('c-name');
+      const emailInput = document.getElementById('c-email');
+      const msgInput = document.getElementById('c-msg');
+      const btn = document.getElementById('c-btn');
+      const btnText = document.getElementById('btn-text');
+      const okMsg = document.getElementById('form-ok');
+      const errMsg = document.getElementById('form-error');
+      const nameErr = document.getElementById('name-error');
+      const emailErr = document.getElementById('email-error');
+      const msgErr = document.getElementById('msg-error');
+
+      // Reset error messages
+      nameErr.style.display = 'none';
+      emailErr.style.display = 'none';
+      msgErr.style.display = 'none';
+      errMsg.style.display = 'none';
+      okMsg.style.display = 'none';
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const msg = msgInput.value.trim();
+
+      let valid = true;
+
+      // Validate
+      if (!validateName(name)) {
+        nameErr.textContent = 'Name must be at least 2 characters';
+        nameErr.style.display = 'block';
+        valid = false;
+      }
+
+      if (!validateEmail(email)) {
+        emailErr.textContent = 'Please enter a valid email';
+        emailErr.style.display = 'block';
+        valid = false;
+      }
+
+      if (!validateMessage(msg)) {
+        msgErr.textContent = 'Message must be at least 10 characters';
+        msgErr.style.display = 'block';
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+
+      // Use fetch to send email via a service (you'll need to set this up)
+      // For now, fall back to mailto which opens the user's email client
+      const subject = encodeURIComponent(`Portfolio Contact — ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
+      
+      try {
+        // Try to send via FormSubmit.co (free service) or similar
+        fetch('https://formspree.io/f/xyzwvut', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message: msg })
+        }).then(res => {
+          if (res.ok) {
+            okMsg.style.display = 'block';
+            okMsg.style.color = 'var(--cyan)';
+            okMsg.style.marginTop = '14px';
+            okMsg.textContent = '✓ MESSAGE SENT SUCCESSFULLY';
+            nameInput.value = '';
+            emailInput.value = '';
+            msgInput.value = '';
+          } else throw new Error('Form submission failed');
+        }).catch(() => {
+          // Fallback to mailto
+          window.location.href = `mailto:sen.tathagata5@gmail.com?subject=${subject}&body=${body}`;
+          okMsg.style.display = 'block';
+          okMsg.style.color = 'var(--cyan)';
+          okMsg.textContent = '✓ EMAIL CLIENT OPENED';
+        }).finally(() => {
+          btn.disabled = false;
+          btnText.textContent = 'Send Message';
+        });
+      } catch (e) {
+        window.location.href = `mailto:sen.tathagata5@gmail.com?subject=${subject}&body=${body}`;
+        okMsg.style.display = 'block';
+        okMsg.style.color = 'var(--cyan)';
+        okMsg.textContent = '✓ EMAIL CLIENT OPENED';
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+      }
+    }
+
+    // ===== RESUME DOWNLOAD =====
     function downloadResume() {
       const a = document.createElement('a');
-      a.href = 'Resume04.pdf'; a.download = 'Tathagata_Sen_Resume.pdf'; a.target = '_blank';
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      a.href = 'Resume04.pdf';
+      a.download = 'Tathagata_Sen_Resume.pdf';
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
 
     // ===== SYSTEM STATUS LIVE =====
