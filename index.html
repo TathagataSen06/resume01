@@ -1032,34 +1032,7 @@
       object-fit: contain;
     }
 
-    /* ===== ARCHITECTURE SECTION ===== */
-    #architecture {
-      padding: 120px 0;
-      background: var(--bg-warm);
-    }
 
-    .arch-header {
-      padding: 0 56px;
-      margin-bottom: 60px;
-    }
-
-    .arch-canvas-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .arch-diagram {
-      width: 100%;
-      height: 420px;
-      position: relative;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .arch-canvas {
-      width: 100%;
-      height: 100%;
-    }
 
     /* ===== EXPERIENCE ===== */
     .exp-timeline {
@@ -1387,15 +1360,7 @@
       color: var(--cyan);
     }
 
-    /* Architecture Diagram */
-    .arch-diagram {
-      height: 500px;
-      margin-top: 40px;
-      border: 1px solid var(--border);
-      background: var(--surface-2);
-      border-radius: 4px;
-      position: relative;
-    }
+
 
     /* ===== ACHIEVEMENTS ===== */
     .ach-grid {
@@ -1798,7 +1763,6 @@
     <div class="nav-links">
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Stack</a>
-      <a href="#architecture" class="nav-link">Architecture</a>
       <a href="#experience" class="nav-link">Journey</a>
       <a href="#projects" class="nav-link">Work</a>
       <a href="#achievements" class="nav-link">Awards</a>
@@ -1847,7 +1811,6 @@
     </button>
     <a href="#about" class="nav-link">About</a>
     <a href="#skills" class="nav-link">Stack</a>
-    <a href="#architecture" class="nav-link">Architecture</a>
     <a href="#experience" class="nav-link">Journey</a>
     <a href="#projects" class="nav-link">Work</a>
     <a href="#achievements" class="nav-link">Awards</a>
@@ -2145,27 +2108,12 @@
       </div>
     </section>
 
-    <!-- ======== ARCHITECTURE ======== -->
-    <section id="architecture" class="section">
-      <div class="arch-header reveal">
-        <div class="section-kicker">03 — Architecture</div>
-        <h2 class="section-title">SaanchaarSetu <em>Pipeline</em></h2>
-        <p
-          style="font-family:var(--serif);font-size:15px;font-weight:300;color:var(--text-2);margin-top:16px;max-width:600px;line-height:1.8;">
-          The bidirectional interoperability middleware connecting Karnataka's Single Window System to 40+ legacy
-          departments — data propagation in under 5 seconds.
-        </p>
-      </div>
-      <div class="arch-diagram">
-        <canvas id="arch-canvas" style="width:100%;height:100%;" role="img"
-          aria-label="SaanchaarSetu pipeline architecture diagram"></canvas>
-      </div>
-    </section>
+
 
     <!-- ======== EXPERIENCE ======== -->
     <section id="experience" class="section section-alt">
       <div class="section-header reveal">
-        <div class="section-kicker">04 — Journey</div>
+        <div class="section-kicker">03 — Journey</div>
         <h2 class="section-title">The <em>Record</em></h2>
       </div>
       <div class="exp-timeline reveal">
@@ -2199,7 +2147,7 @@
     <!-- ======== PROJECTS ======== -->
     <section id="projects" style="padding-bottom:0;padding-left:0;padding-right:0;padding-top:120px;">
       <div class="proj-header reveal">
-        <div class="section-kicker">05 — Work</div>
+        <div class="section-kicker">04 — Work</div>
         <h2 class="section-title">Featured <em>Systems</em></h2>
       </div>
 
@@ -2353,7 +2301,7 @@
     <!-- ======== ACHIEVEMENTS ======== -->
     <section id="achievements" class="section section-alt">
       <div class="section-header reveal">
-        <div class="section-kicker">06 — Awards</div>
+        <div class="section-kicker">05 — Awards</div>
         <h2 class="section-title">Recognition &amp; <em>Results</em></h2>
       </div>
       <div class="ach-grid">
@@ -2395,7 +2343,7 @@
     <!-- ======== CONTACT ======== -->
     <section id="contact" class="section">
       <div class="section-header reveal">
-        <div class="section-kicker">07 — Contact</div>
+        <div class="section-kicker">06 — Contact</div>
         <h2 class="section-title">Let's build<br><em>together.</em></h2>
       </div>
       <div class="contact-grid">
@@ -2790,138 +2738,7 @@
       window.addEventListener('resize', resize);
     })();
 
-    // ===== ARCHITECTURE CANVAS =====
-    (function () {
-      const canvas = document.getElementById('arch-canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      let W, H;
-      function resize() {
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-      }
 
-      const NODES = [
-        { id: 'sws', label: 'Single Window\nSystem', x: .08, y: .5, color: 'rgba(196,164,92,.15)', stroke: 'rgba(196,164,92,.4)', tw: 96 },
-        { id: 'ing', label: '3-Tier\nIngestion', x: .23, y: .5, color: 'rgba(61,223,204,.08)', stroke: 'rgba(61,223,204,.5)', tw: 80 },
-        { id: 'kafka', label: 'Kafka\nStream', x: .38, y: .5, color: 'rgba(61,223,204,.08)', stroke: 'rgba(61,223,204,.5)', tw: 70 },
-        { id: 'pii', label: 'PII\nScrubber', x: .5, y: .28, color: 'rgba(196,164,92,.1)', stroke: 'rgba(196,164,92,.3)', tw: 70 },
-        { id: 'sem', label: 'Semantic\nMapper', x: .5, y: .72, color: 'rgba(61,223,204,.1)', stroke: 'rgba(61,223,204,.4)', tw: 78 },
-        { id: 'redis', label: 'Redis\nGate', x: .64, y: .5, color: 'rgba(196,164,92,.08)', stroke: 'rgba(196,164,92,.3)', tw: 60 },
-        { id: 'dept', label: '40+ Dept.\nAPIs', x: .82, y: .5, color: 'rgba(61,223,204,.1)', stroke: 'rgba(61,223,204,.5)', tw: 76 },
-        { id: 'audit', label: 'Audit\nLog', x: .64, y: .82, color: 'rgba(196,164,92,.06)', stroke: 'rgba(196,164,92,.2)', tw: 60 },
-        { id: 'dlq', label: 'DLQ\nRetry', x: .64, y: .18, color: 'rgba(196,164,92,.06)', stroke: 'rgba(196,164,92,.2)', tw: 60 },
-      ];
-
-      const EDGES = [
-        ['sws', 'ing'], ['ing', 'kafka'],
-        ['kafka', 'pii'], ['kafka', 'sem'],
-        ['pii', 'redis'], ['sem', 'redis'],
-        ['redis', 'dept'], ['redis', 'audit'], ['redis', 'dlq'],
-      ];
-
-      let packets = [];
-      let elapsed = 0;
-
-      let textColor, subTextColor, edgeColor;
-      function updateCanvasColors() {
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        textColor = isLight ? 'rgba(38,36,33,.9)' : 'rgba(240,235,224,.8)';
-        subTextColor = isLight ? 'rgba(115,110,102,.9)' : 'rgba(138,132,121,.9)';
-        edgeColor = isLight ? 'rgba(38,36,33,.15)' : 'rgba(255,248,230,.08)';
-      }
-
-      function spawnPacket() {
-        const edge = EDGES[Math.floor(Math.random() * EDGES.length)];
-        const from = NODES.find(n => n.id === edge[0]);
-        const to = NODES.find(n => n.id === edge[1]);
-        if (from && to) {
-          packets.push({
-            x: from.x * W, y: from.y * H,
-            tx: to.x * W, ty: to.y * H,
-            progress: 0, speed: .012 + Math.random() * .01,
-            color: Math.random() > .5 ? 'rgba(61,223,204,.9)' : 'rgba(196,164,92,.8)'
-          });
-        }
-      }
-
-      function drawNode(n) {
-        const x = n.x * W, y = n.y * H;
-        const bw = 104, bh = 44;
-        ctx.fillStyle = n.color;
-        ctx.strokeStyle = n.stroke;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.roundRect(x - bw / 2, y - bh / 2, bw, bh, 3);
-        ctx.fill(); ctx.stroke();
-        ctx.fillStyle = textColor;
-        ctx.font = 'bold 10px "DM Mono", monospace';
-        ctx.textAlign = 'center';
-        const lines = n.label.split('\n');
-        if (lines.length === 2) {
-          ctx.fillText(lines[0], x, y - 6);
-          ctx.fillStyle = subTextColor;
-          ctx.font = 'bold 9px "DM Mono", monospace';
-          ctx.fillText(lines[1], x, y + 8);
-        } else {
-          ctx.fillText(n.label, x, y + 4);
-        }
-      }
-
-      function drawEdge(from, to) {
-        const fx = from.x * W, fy = from.y * H, tx = to.x * W, ty = to.y * H;
-        ctx.beginPath();
-        ctx.moveTo(fx + 52, fy);
-        const mx = (fx + tx) / 2;
-        ctx.bezierCurveTo(mx, fy, mx, ty, tx - 52, ty);
-        ctx.strokeStyle = edgeColor;
-        ctx.lineWidth = 1;
-        ctx.setLineDash([4, 8]);
-        ctx.stroke();
-        ctx.setLineDash([]);
-      }
-
-      function draw(ts) {
-        updateCanvasColors();
-        ctx.clearRect(0, 0, W, H);
-        elapsed = ts;
-
-        // edges
-        EDGES.forEach(([a, b]) => {
-          const fn = NODES.find(n => n.id === a), tn = NODES.find(n => n.id === b);
-          if (fn && tn) drawEdge(fn, tn);
-        });
-
-        // nodes
-        NODES.forEach(drawNode);
-
-        // packets
-        packets = packets.filter(p => {
-          p.progress += p.speed;
-          if (p.progress >= 1) return false;
-          const t = p.progress;
-          const px = p.x * (1 - t) + p.tx * t;
-          const py = p.y * (1 - t) + p.ty * t;
-          ctx.beginPath();
-          ctx.arc(px, py, 3, 0, Math.PI * 2);
-          ctx.fillStyle = p.color;
-          ctx.fill();
-          // glow
-          ctx.beginPath();
-          ctx.arc(px, py, 6, 0, Math.PI * 2);
-          ctx.fillStyle = p.color.replace(')', ',0.2)').replace('rgba(', 'rgba(');
-          ctx.fill();
-          return true;
-        });
-
-        if (Math.random() < .04) spawnPacket();
-        requestAnimationFrame(draw);
-      }
-
-      resize();
-      requestAnimationFrame(draw);
-      window.addEventListener('resize', () => { resize(); });
-    })();
 
     // Theme Toggling Logic
     const themeToggles = document.querySelectorAll('.theme-toggle');
