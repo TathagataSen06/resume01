@@ -1750,6 +1750,7 @@
     [data-theme="dark"] .new-hero-wrapper {
       background: radial-gradient(circle at 10% 20%, #2a1610 0%, #1a100a 30%, #0c0b09 70%, #080807 100%);
     }
+
     .new-hero-wrapper {
       background: radial-gradient(circle at 10% 20%, #ffd4ba 0%, #ffe9d9 30%, #fdf5eb 70%, var(--bg) 100%);
       color: var(--text);
@@ -1757,6 +1758,7 @@
       flex-direction: column;
       position: relative;
     }
+
     .new-nav {
       display: flex;
       justify-content: space-between;
@@ -1767,16 +1769,19 @@
       position: relative;
       z-index: 100;
     }
+
     .nav-left strong {
       font-family: var(--serif);
       font-size: 22px;
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+
     .nav-sub {
       color: var(--text-3);
       margin-left: 8px;
     }
+
     .nav-center-pill {
       background: var(--pill-bg);
       border-radius: 40px;
@@ -1785,6 +1790,7 @@
       gap: 4px;
       border: 1px solid var(--border);
     }
+
     .nav-center-pill a {
       padding: 8px 18px;
       border-radius: 40px;
@@ -1794,22 +1800,30 @@
       font-weight: 500;
       transition: all 0.2s;
     }
-    .nav-center-pill a.active, .nav-center-pill a:hover {
+
+    .nav-center-pill a.active,
+    .nav-center-pill a:hover {
       background: var(--text);
       color: var(--bg);
     }
+
     .nav-right {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+
     .nav-icon {
       color: var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .nav-icon:hover { color: var(--cyan); }
+
+    .nav-icon:hover {
+      color: var(--cyan);
+    }
+
     .nav-call-btn {
       background: var(--text);
       color: var(--bg);
@@ -1821,8 +1835,11 @@
       cursor: pointer;
       transition: opacity 0.2s;
     }
-    .nav-call-btn:hover { opacity: 0.8; }
-    
+
+    .nav-call-btn:hover {
+      opacity: 0.8;
+    }
+
     .new-hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1832,6 +1849,7 @@
       margin: 0 auto;
       width: 100%;
     }
+
     .hero-tag {
       font-family: var(--mono);
       font-size: 10px;
@@ -1843,13 +1861,18 @@
       gap: 8px;
       margin-bottom: 6px;
     }
-    [data-theme="dark"] .hero-tag { color: #e87b58; }
+
+    [data-theme="dark"] .hero-tag {
+      color: #e87b58;
+    }
+
     .red-dot {
       width: 6px;
       height: 6px;
       background: #e54c2a;
       border-radius: 50%;
     }
+
     .hero-greeting {
       font-family: var(--serif);
       font-size: clamp(60px, 6vw, 96px);
@@ -1858,15 +1881,18 @@
       margin: 32px 0 24px;
       letter-spacing: -0.04em;
     }
+
     .hero-greeting em {
       font-style: italic;
       font-weight: 400;
       color: var(--gold);
     }
+
     .hero-bullets {
       list-style: none;
       margin-bottom: 40px;
     }
+
     .hero-bullets li {
       position: relative;
       font-family: sans-serif;
@@ -1877,6 +1903,7 @@
       padding-left: 20px;
       max-width: 500px;
     }
+
     .hero-bullets li::before {
       content: '';
       position: absolute;
@@ -1887,14 +1914,16 @@
       border-radius: 50%;
       background: #e54c2a;
     }
+
     .mission-box {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 24px;
       max-width: 500px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
+
     .mission-title {
       font-family: var(--mono);
       font-size: 10px;
@@ -1906,8 +1935,16 @@
       align-items: center;
       gap: 6px;
     }
-    [data-theme="dark"] .mission-title { color: #e87b58; }
-    .red-icon { color: #e54c2a; font-size: 14px; }
+
+    [data-theme="dark"] .mission-title {
+      color: #e87b58;
+    }
+
+    .red-icon {
+      color: #e54c2a;
+      font-size: 14px;
+    }
+
     .mission-box p {
       font-family: sans-serif;
       font-size: 14px;
@@ -1915,6 +1952,7 @@
       line-height: 1.6;
       margin-bottom: 16px;
     }
+
     .mission-quote {
       font-family: var(--serif) !important;
       font-style: italic;
@@ -1922,11 +1960,13 @@
       color: var(--text) !important;
       margin-bottom: 0 !important;
     }
+
     .mission-ctas {
       display: flex;
       gap: 12px;
       margin-top: 24px;
     }
+
     .btn-dark {
       background: var(--text);
       color: var(--bg);
@@ -1937,7 +1977,11 @@
       font-weight: 600;
       transition: opacity 0.2s;
     }
-    .btn-dark:hover { opacity: 0.8; }
+
+    .btn-dark:hover {
+      opacity: 0.8;
+    }
+
     .btn-light {
       background: transparent;
       border: 1px solid var(--border-2);
@@ -1949,7 +1993,11 @@
       font-weight: 600;
       transition: all 0.2s;
     }
-    .btn-light:hover { border-color: var(--text); }
+
+    .btn-light:hover {
+      border-color: var(--text);
+    }
+
     .hero-scroll-new {
       font-family: var(--mono);
       font-size: 10px;
@@ -1957,6 +2005,7 @@
       color: var(--text-3);
       margin-top: 60px;
     }
+
     .hero-right {
       position: relative;
       display: flex;
@@ -1964,6 +2013,7 @@
       align-items: flex-end;
       padding-top: 20px;
     }
+
     .hero-location-top {
       font-family: var(--mono);
       font-size: 10px;
@@ -1973,6 +2023,7 @@
       width: 100%;
       text-align: right;
     }
+
     .hero-photo-wrap {
       width: 100%;
       max-width: 480px;
@@ -1980,18 +2031,20 @@
       position: relative;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
+
     .hero-photo-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .photo-tag {
       position: absolute;
       bottom: 20px;
       left: 20px;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(8px);
       padding: 8px 14px;
       border-radius: 6px;
@@ -2001,10 +2054,12 @@
       color: #111;
       font-weight: 600;
     }
+
     [data-theme="dark"] .photo-tag {
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       color: #fff;
     }
+
     .new-metrics-strip {
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -2021,32 +2076,78 @@
       margin: 0 auto;
       width: 100%;
     }
+
     .m-item {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .m-icon {
       color: #b54924;
       font-size: 14px;
     }
-    [data-theme="dark"] .m-icon { color: #e87b58; }
-    
-    @media (max-width: 1100px) {
-      .new-hero-grid { grid-template-columns: 1fr; }
-      .hero-right { align-items: flex-start; }
-      .hero-location-top { text-align: left; }
-      .hero-photo-wrap { height: 480px; max-width: 100%; }
-      .new-metrics-strip { flex-wrap: wrap; gap: 20px; }
+
+    [data-theme="dark"] .m-icon {
+      color: #e87b58;
     }
+
+    @media (max-width: 1100px) {
+      .new-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        align-items: flex-start;
+      }
+
+      .hero-location-top {
+        text-align: left;
+      }
+
+      .hero-photo-wrap {
+        height: 480px;
+        max-width: 100%;
+      }
+
+      .new-metrics-strip {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+
     @media (max-width: 900px) {
-      .nav-center-pill { display: none; }
-      .desktop { display: none !important; }
-      .hamburger { display: flex !important; }
-      .new-nav { padding: 18px 24px; }
-      .new-hero-grid { padding: 24px; gap: 40px; }
-      .new-metrics-strip { flex-direction: column; align-items: flex-start; padding: 24px; gap: 16px; }
-      .hero-greeting { font-size: 48px; }
+      .nav-center-pill {
+        display: none;
+      }
+
+      .desktop {
+        display: none !important;
+      }
+
+      .hamburger {
+        display: flex !important;
+      }
+
+      .new-nav {
+        padding: 18px 24px;
+      }
+
+      .new-hero-grid {
+        padding: 24px;
+        gap: 40px;
+      }
+
+      .new-metrics-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 16px;
+      }
+
+      .hero-greeting {
+        font-size: 48px;
+      }
     }
   </style>
 </head>
@@ -2075,10 +2176,12 @@
       </div>
       <div class="nav-right">
         <button class="theme-toggle desktop" aria-label="Toggle dark/light theme" style="margin-right:8px;">
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:currentColor">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"
+            style="width:16px;height:16px;fill:currentColor">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"
+            style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -2092,20 +2195,36 @@
         </button>
         <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="nav-icon desktop">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
           </svg>
         </a>
-        <button class="nav-call-btn desktop" onclick="document.getElementById('contact').scrollIntoView()">Schedule call →</button>
-        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" style="display:none;">
+        <button class="nav-call-btn desktop" onclick="document.getElementById('contact').scrollIntoView()">Schedule call
+          →</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+          style="display:none;">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
 
     <div class="mobile-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
-      <button class="theme-toggle mobile" aria-label="Toggle dark/light theme" style="margin-bottom: 24px; transform: scale(1.5);">
-        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <button class="theme-toggle mobile" aria-label="Toggle dark/light theme"
+        style="margin-bottom: 24px; transform: scale(1.5);">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
       </button>
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Stack</a>
@@ -2124,25 +2243,26 @@
         <div class="hero-tag">
           <span class="red-dot"></span> ABOUT ME
         </div>
-        
+
         <h1 class="hero-greeting">hey, I'm <br><em>Tathagata</em> 👋</h1>
-        
+
         <ul class="hero-bullets">
-          <li>CS @ BIT Mesra — building scalable software products across backend systems, AI, and modern web technologies.</li>
+          <li>CS @ BIT Mesra — building scalable software products across backend systems, AI, and modern web
+            technologies.</li>
         </ul>
-        
+
         <div class="mission-box">
           <div class="mission-title"><span class="red-icon">🎯</span> MY MISSION</div>
-          <p>Building robust, scalable AI infrastructure and interoperability middleware that power critical systems without the surveillance trade-off.</p>
+          <p>Engineering scalable systems, intelligent applications, and infrastructure that people can rely on.</p>
           <div class="mission-ctas">
             <a href="#projects" class="btn-dark">View Systems →</a>
             <a href="#contact" class="btn-light">Let's Talk</a>
           </div>
         </div>
-        
+
         <div class="hero-scroll-new">↓ SCROLL FOR THE REST</div>
       </div>
-      
+
       <div class="hero-right">
         <div class="hero-location-top">INDIA · IST · 2027</div>
         <div class="hero-photo-wrap">
