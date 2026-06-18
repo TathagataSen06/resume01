@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Tathagata Sen — Distributed AI Systems Engineer. Interoperability middleware, real-time ML pipelines, multi-agent orchestration. CS @ BIT Mesra.">
+    content="CS @ BIT Mesra — building scalable software products across backend systems, AI, and modern web technologies.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#faf9f7">
   <title>Tathagata Sen — Distributed AI Systems Engineer</title>
@@ -873,7 +873,6 @@
       border: 1px solid var(--border);
       filter: grayscale(20%);
       transition: filter var(--t);
-      loading: lazy;
     }
 
     .about-photo:hover {
@@ -1033,34 +1032,7 @@
       object-fit: contain;
     }
 
-    /* ===== ARCHITECTURE SECTION ===== */
-    #architecture {
-      padding: 120px 0;
-      background: var(--bg-warm);
-    }
 
-    .arch-header {
-      padding: 0 56px;
-      margin-bottom: 60px;
-    }
-
-    .arch-canvas-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .arch-diagram {
-      width: 100%;
-      height: 420px;
-      position: relative;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .arch-canvas {
-      width: 100%;
-      height: 100%;
-    }
 
     /* ===== EXPERIENCE ===== */
     .exp-timeline {
@@ -1388,15 +1360,7 @@
       color: var(--cyan);
     }
 
-    /* Architecture Diagram */
-    .arch-diagram {
-      height: 500px;
-      margin-top: 40px;
-      border: 1px solid var(--border);
-      background: var(--surface-2);
-      border-radius: 4px;
-      position: relative;
-    }
+
 
     /* ===== ACHIEVEMENTS ===== */
     .ach-grid {
@@ -1781,6 +1745,410 @@
       padding: 120px 56px;
       background: var(--bg);
     }
+
+    /* NEW HERO & NAV CSS */
+    [data-theme="dark"] .new-hero-wrapper {
+      background: radial-gradient(circle at 10% 20%, #2a1610 0%, #1a100a 30%, #0c0b09 70%, #080807 100%);
+    }
+
+    .new-hero-wrapper {
+      background: radial-gradient(circle at 10% 20%, #ffd4ba 0%, #ffe9d9 30%, #fdf5eb 70%, var(--bg) 100%);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .new-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 56px;
+      font-family: var(--mono);
+      font-size: 13px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav-left strong {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-sub {
+      color: var(--text-3);
+      margin-left: 8px;
+    }
+
+    .nav-center-pill {
+      background: var(--pill-bg);
+      border-radius: 40px;
+      display: flex;
+      padding: 6px;
+      gap: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .nav-center-pill a {
+      padding: 8px 18px;
+      border-radius: 40px;
+      color: var(--text-2);
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .nav-center-pill a.active,
+    .nav-center-pill a:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-icon {
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon:hover {
+      color: var(--cyan);
+    }
+
+    .nav-call-btn {
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 40px;
+      padding: 10px 22px;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .nav-call-btn:hover {
+      opacity: 0.8;
+    }
+
+    .new-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 40px 56px 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: #b54924;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    [data-theme="dark"] .hero-tag {
+      color: #e87b58;
+    }
+
+    .red-dot {
+      width: 6px;
+      height: 6px;
+      background: #e54c2a;
+      border-radius: 50%;
+    }
+
+    .hero-greeting {
+      font-family: var(--serif);
+      font-size: clamp(60px, 6vw, 96px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin: 32px 0 24px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-greeting em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold);
+    }
+
+    .hero-bullets {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .hero-bullets li {
+      position: relative;
+      font-family: sans-serif;
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      padding-left: 20px;
+      max-width: 500px;
+    }
+
+    .hero-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e54c2a;
+    }
+
+    .mission-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .mission-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: #b54924;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    [data-theme="dark"] .mission-title {
+      color: #e87b58;
+    }
+
+    .red-icon {
+      color: #e54c2a;
+      font-size: 14px;
+    }
+
+    .mission-box p {
+      font-family: sans-serif;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .mission-quote {
+      font-family: var(--serif) !important;
+      font-style: italic;
+      font-size: 18px !important;
+      color: var(--text) !important;
+      margin-bottom: 0 !important;
+    }
+
+    .mission-ctas {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn-dark {
+      background: var(--text);
+      color: var(--bg);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .btn-dark:hover {
+      opacity: 0.8;
+    }
+
+    .btn-light {
+      background: transparent;
+      border: 1px solid var(--border-2);
+      color: var(--text);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-light:hover {
+      border-color: var(--text);
+    }
+
+    .hero-scroll-new {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--text-3);
+      margin-top: 60px;
+    }
+
+    .hero-right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 20px;
+    }
+
+    .hero-location-top {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--text-3);
+      margin-bottom: 24px;
+      width: 100%;
+      text-align: right;
+    }
+
+    .hero-photo-wrap {
+      width: 100%;
+      max-width: 480px;
+      height: 560px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: #111;
+      font-weight: 600;
+    }
+
+    [data-theme="dark"] .photo-tag {
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    .new-metrics-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .m-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .m-icon {
+      color: #b54924;
+      font-size: 14px;
+    }
+
+    [data-theme="dark"] .m-icon {
+      color: #e87b58;
+    }
+
+    @media (max-width: 1100px) {
+      .new-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        align-items: flex-start;
+      }
+
+      .hero-location-top {
+        text-align: left;
+      }
+
+      .hero-photo-wrap {
+        height: 480px;
+        max-width: 100%;
+      }
+
+      .new-metrics-strip {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-center-pill {
+        display: none;
+      }
+
+      .desktop {
+        display: none !important;
+      }
+
+      .hamburger {
+        display: flex !important;
+      }
+
+      .new-nav {
+        padding: 18px 24px;
+      }
+
+      .new-hero-grid {
+        padding: 24px;
+        gap: 40px;
+      }
+
+      .new-metrics-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 16px;
+      }
+
+      .hero-greeting {
+        font-size: 48px;
+      }
+    }
   </style>
 </head>
 
@@ -1792,21 +2160,57 @@
     <div id="c-ring"></div>
   </div>
 
-  <!-- NAV -->
-  <nav id="nav" role="navigation" aria-label="Main navigation">
-    <a href="#" class="nav-brand"><strong>Tathagata Sen</strong> — <em style="font-style:italic;color:var(--text-2)">AI
-        Systems</em></a>
-    <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Stack</a>
-      <a href="#architecture" class="nav-link">Architecture</a>
-      <a href="#experience" class="nav-link">Journey</a>
-      <a href="#projects" class="nav-link">Work</a>
-      <a href="#achievements" class="nav-link">Awards</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
-    <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
-      <button class="theme-toggle desktop" aria-label="Toggle dark/light theme">
+  <div class="new-hero-wrapper">
+    <!-- NAV -->
+    <nav class="new-nav" id="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-left">
+        <strong>Tathagata Sen</strong> 
+      </div>
+      <div class="nav-center-pill">
+        <a href="#about" class="active">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#experience">Journey</a>
+        <a href="#projects">Work</a>
+        <a href="#achievements">Awards</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle desktop" aria-label="Toggle dark/light theme" style="margin-right:8px;">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"
+            style="width:16px;height:16px;fill:currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"
+            style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="nav-icon desktop">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <button class="nav-call-btn desktop" onclick="document.getElementById('contact').scrollIntoView()">Schedule call
+          →</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+          style="display:none;">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
+      <button class="theme-toggle mobile" aria-label="Toggle dark/light theme"
+        style="margin-bottom: 24px; transform: scale(1.5);">
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
@@ -1822,125 +2226,54 @@
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </button>
-      <button class="nav-resume" onclick="downloadResume()" aria-label="Download resume">Resume ↓</button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Stack</a>
+      <a href="#experience" class="nav-link">Journey</a>
+      <a href="#projects" class="nav-link">Work</a>
+      <a href="#achievements" class="nav-link">Awards</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
-  </nav>
-
-  <div class="mobile-menu" id="mob-menu" role="navigation" aria-label="Mobile navigation">
-    <button class="theme-toggle mobile" aria-label="Toggle dark/light theme" style="margin-bottom: 24px; transform: scale(1.5);">
-      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Stack</a>
-    <a href="#architecture" class="nav-link">Architecture</a>
-    <a href="#experience" class="nav-link">Journey</a>
-    <a href="#projects" class="nav-link">Work</a>
-    <a href="#achievements" class="nav-link">Awards</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
-
-  <main>
 
     <!-- ======== HERO ======== -->
-    <section id="hero">
-      <canvas class="hero-canvas" id="hero-canvas" role="img" aria-label="Animated background topology network"></canvas>
+    <section class="new-hero-grid">
+      <div class="hero-left">
 
-      <div class="hero-sysbox">
-        <div class="sysbox-panel">
-          <div class="sysbox-title">System Status</div>
-          <div class="sysbox-row">
-            <span class="sysbox-label">Kafka Streams</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>ACTIVE</span>
-          </div>
-          <div class="sysbox-row">
-            <span class="sysbox-label">Inference Layer</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>RUNNING</span>
-          </div>
-          <div class="sysbox-row">
-            <span class="sysbox-label">Semantic Mapping</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>STABLE</span>
-          </div>
-          <div class="sysbox-row">
-            <span class="sysbox-label">RAG Agents</span>
-            <span class="sysbox-status ok"><span class="sysbox-dot" aria-hidden="true"></span>ONLINE</span>
-          </div>
-          <div class="sysbox-row">
-            <span class="sysbox-label">Propagation</span>
-            <span class="sysbox-status warn"><span class="sysbox-dot" aria-hidden="true"></span><span id="latency-val">4.7s</span></span>
-          </div>
-          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
-            <div class="sysbox-metric">Last sync: <span id="sync-time">0.0s ago</span></div>
-            <div class="sysbox-metric" style="margin-top:4px">Throughput: <span id="throughput">1847 msg/s</span></div>
+        <h1 class="hero-greeting">hey, I'm <br><em>Tathagata</em> 👋</h1>
+
+        <ul class="hero-bullets">
+          <li>CS @ BIT Mesra — building scalable software products across backend systems, AI, and modern web
+            technologies.</li>
+        </ul>
+
+        <div class="mission-box">
+          <div class="mission-title"><span class="red-icon">🎯</span> MY MISSION</div>
+          <p>Engineering scalable systems, intelligent applications, and infrastructure that people can rely on.</p>
+          <div class="mission-ctas">
+            <a href="#projects" class="btn-dark">View Systems →</a>
+            <a href="#contact" class="btn-light">Let's Talk</a>
           </div>
         </div>
+
+        <div class="hero-scroll-new">↓ SCROLL FOR THE REST</div>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-status">
-          <div class="status-pulse" aria-hidden="true"></div>
-          Available — Internships · Summer 2027
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <img src="https://i.postimg.cc/x84TyCgD/Screenshot-2025-07-24-224412.png" alt="Portrait of Tathagata Sen">
         </div>
-
-        <h1 class="hero-title">
-          <span class="hero-line">Tathagata</span>
-          <span class="hero-line">Sen.</span>
-        </h1>
-
-        <div class="hero-foot">
-          <p class="hero-sub">
-            CS @ BIT Mesra — building interoperability middleware, semantic AI pipelines, multi-agent orchestration, and
-            browser-native ML infrastructure.
-          </p>
-          <div class="hero-ctas">
-            <a href="#projects" class="btn-primary"><span>View Systems</span><span aria-hidden="true">→</span></a>
-            <a href="#contact" class="btn-ghost">Let's Talk</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-scroll">
-        <div class="hero-scroll-line"></div>
-        Scroll to explore
       </div>
     </section>
 
     <!-- ======== METRICS ======== -->
-    <div class="metrics-strip reveal">
-      <div class="metric-cell">
-        <div class="metric-val"><span class="accent">8.12</span></div>
-        <div class="metric-label">CGPA</div>
-        <div class="metric-sub">BIT Mesra</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-val"><span class="counter" data-target="500">0</span><span class="accent">+</span></div>
-        <div class="metric-label">Leetcode Problems Solved</div>
-        <div class="metric-sub">Data Structures & Algorithms</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-val"><span class="counter" data-target="5">0</span><span class="accent">+</span></div>
-        <div class="metric-label">Live Projects</div>
-        <div class="metric-sub">Deployed & Active</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-val"><span class="gold">₹1L</span></div>
-        <div class="metric-label">Hackathon Prize</div>
-        <div class="metric-sub">Winner — AI For Bharat</div>
-      </div>
+    <div class="new-metrics-strip reveal">
+      <div class="m-item"><span class="m-icon">💯</span> 8.12 CGPA</div>
+      <div class="m-item"><span class="m-icon">🚀</span> 500+ LEETCODE</div>
+      <div class="m-item"><span class="m-icon">🔴</span> 5+ LIVE PROJECTS</div>
+      <div class="m-item"><span class="m-icon">🏆</span> ₹1L HACKATHON PRIZE</div>
     </div>
+  </div>
+
+  <main>
 
     <!-- ======== ABOUT ======== -->
     <section id="about" class="section section-alt">
@@ -1948,15 +2281,7 @@
         <div class="section-kicker">01 — About</div>
         <h2 class="section-title">Building systems<br>that <em>think.</em></h2>
       </div>
-      <div class="about-grid">
-        <div class="reveal">
-          <img src="https://i.postimg.cc/x84TyCgD/Screenshot-2025-07-24-224412.png" alt="Portrait of Tathagata Sen"
-            class="about-photo" loading="lazy" onerror="this.src='https://placehold.co/280x370/111009/c4a45c?text=TS&font=serif'">
-          <div class="about-caption">
-            <span class="live-dot" aria-hidden="true"></span>
-            Available · Mumbai, India · CGPA 8.12
-          </div>
-        </div>
+      <div class="about-grid" style="grid-template-columns: 1fr;">
         <div class="about-text reveal r1">
           <p>Pre-final year Computer Science student at BIT Mesra (2023–2027), specialising in distributed AI systems,
             interoperability middleware, and real-time infrastructure. I build production-grade systems — not demos.</p>
@@ -1972,14 +2297,15 @@
               </svg>
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer" class="about-link">
+            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer"
+              class="about-link">
               <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
               LinkedIn
             </a>
-            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="about-link">LC — Knight 1876</a>
+            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="about-link">LeetCode</a>
             <a href="mailto:sen.tathagata5@gmail.com" class="about-link">Email</a>
           </div>
         </div>
@@ -1989,128 +2315,195 @@
     <!-- ======== SKILLS ======== -->
     <section id="skills" class="section">
       <div class="section-header reveal">
-        <div class="section-kicker">02 — Stack</div>
-        <h2 class="section-title">Core <em>Infrastructure</em></h2>
+        <div class="section-kicker">02 — STACK</div>
+        <h2 class="section-title">Technical <em>Expertise</em></h2>
       </div>
+
       <div class="skills-grid">
 
+        <!-- Languages -->
         <div class="skill-card reveal">
           <div class="skill-cat">Languages</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python logo">
-              Python</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java logo">
-              Java</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart logo">
-              Dart</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                alt="JavaScript logo"> JavaScript</span>
-            <span class="pill" tabindex="0">SQL</span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+              Python
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+              Java
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript">
+              JavaScript
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-database"></i>
+              SQL
+            </span>
+
           </div>
         </div>
 
+        <!-- AI / ML -->
         <div class="skill-card reveal r1">
           <div class="skill-cat">AI / ML Systems</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
-                alt="TensorFlow logo"> TensorFlow.js</span>
-            <span class="pill" tabindex="0">Scikit-learn</span>
-            <span class="pill" tabindex="0">RAG Pipelines</span>
-            <span class="pill" tabindex="0">Agentic AI</span>
-            <span class="pill" tabindex="0">NLP / TF-IDF</span>
-            <span class="pill" tabindex="0">K-Means / MLP</span>
-            <span class="pill" tabindex="0">Groq / Llama 3</span>
-            <span class="pill" tabindex="0">Sentence Transformers</span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow">
+              TensorFlow.js
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-brain"></i>
+              Sentence Transformers
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-robot"></i>
+              RAG Systems
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-database"></i>
+              Vector Search
+            </span>
+
           </div>
         </div>
 
+        <!-- Backend -->
         <div class="skill-card reveal r2">
-          <div class="skill-cat">Backend & Infra</div>
+          <div class="skill-cat">Backend & Systems</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI logo">
-              FastAPI</span>
-            <span class="pill" tabindex="0">Apache Kafka</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis logo">
-              Redis</span>
-            <span class="pill" tabindex="0">pgvector</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase logo">
-              Firebase</span>
-            <span class="pill" tabindex="0">Debezium CDC</span>
-            <span class="pill" tabindex="0">GCP Functions</span>
-            <span class="pill" tabindex="0">Dead Letter Queue</span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+              FastAPI
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                alt="Kafka">
+              Kafka
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL">
+              PostgreSQL
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+              Redis
+            </span>
+
           </div>
         </div>
 
+        <!-- Frontend -->
         <div class="skill-card reveal">
           <div class="skill-cat">Frontend & Mobile</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React logo">
-              React</span>
-            <span class="pill" tabindex="0"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter logo">
-              Flutter</span>
-            <span class="pill" tabindex="0">Tailwind CSS</span>
-            <span class="pill" tabindex="0">Chart.js</span>
-            <span class="pill" tabindex="0">Canvas API</span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+              React
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+              Flutter
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS">
+              Tailwind CSS
+            </span>
+
           </div>
         </div>
 
+        <!-- Cloud & DevOps -->
         <div class="skill-card reveal r1">
-          <div class="skill-cat">Tools</div>
+          <div class="skill-cat">Cloud & DevOps</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                alt="Git logo"> Git</span>
-            <span class="pill" tabindex="0">MySQL</span>
-            <span class="pill" tabindex="0">Twilio API</span>
-            <span class="pill" tabindex="0">Android SDK</span>
-            <span class="pill" tabindex="0">VS Code</span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+              Firebase
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                alt="Google Cloud">
+              Google Cloud
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+              Git
+            </span>
+
+            <span class="pill" tabindex="0">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+              GitHub
+            </span>
+
           </div>
         </div>
 
+        <!-- Core CS -->
         <div class="skill-card reveal r2">
-          <div class="skill-cat">CS Fundamentals</div>
+          <div class="skill-cat">Core CS</div>
           <div class="skill-pills">
-            <span class="pill" tabindex="0">DSA — LC Knight</span>
-            <span class="pill" tabindex="0">OOP</span>
-            <span class="pill" tabindex="0">REST APIs</span>
-            <span class="pill" tabindex="0">OS</span>
-            <span class="pill" tabindex="0">Neural Networks</span>
-            <span class="pill" tabindex="0">Distributed Systems</span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-code"></i>
+              DSA
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-cubes"></i>
+              OOP
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-server"></i>
+              DBMS
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-microchip"></i>
+              Operating Systems
+            </span>
+
+            <span class="pill" tabindex="0">
+              <i class="fa-solid fa-network-wired"></i>
+              Computer Networks
+            </span>
+
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ======== ARCHITECTURE ======== -->
-    <section id="architecture" class="section">
-      <div class="arch-header reveal">
-        <div class="section-kicker">03 — Architecture</div>
-        <h2 class="section-title">SaanchaarSetu <em>Pipeline</em></h2>
-        <p
-          style="font-family:var(--serif);font-size:15px;font-weight:300;color:var(--text-2);margin-top:16px;max-width:600px;line-height:1.8;">
-          The bidirectional interoperability middleware connecting Karnataka's Single Window System to 40+ legacy
-          departments — data propagation in under 5 seconds.
-        </p>
-      </div>
-      <div class="arch-diagram">
-        <canvas id="arch-canvas" style="width:100%;height:100%;" role="img" aria-label="SaanchaarSetu pipeline architecture diagram"></canvas>
-      </div>
-    </section>
+
 
     <!-- ======== EXPERIENCE ======== -->
     <section id="experience" class="section section-alt">
       <div class="section-header reveal">
-        <div class="section-kicker">04 — Journey</div>
+        <div class="section-kicker">03 — Journey</div>
         <h2 class="section-title">The <em>Record</em></h2>
       </div>
       <div class="exp-timeline reveal">
@@ -2144,7 +2537,7 @@
     <!-- ======== PROJECTS ======== -->
     <section id="projects" style="padding-bottom:0;padding-left:0;padding-right:0;padding-top:120px;">
       <div class="proj-header reveal">
-        <div class="section-kicker">05 — Work</div>
+        <div class="section-kicker">04 — Work</div>
         <h2 class="section-title">Featured <em>Systems</em></h2>
       </div>
 
@@ -2155,8 +2548,8 @@
           <div class="flagship-badge"><span class="flagship-badge-dot" aria-hidden="true"></span> Flagship System</div>
           <div class="proj-name">
             SaanchaarSetu
-            <a href="https://github.com/TathagataSen06/SanchaarSetu" target="_blank" rel="noopener noreferrer" class="proj-gh"
-              onclick="event.stopPropagation()" aria-label="View SaanchaarSetu on GitHub">
+            <a href="https://github.com/TathagataSen06/SanchaarSetu" target="_blank" rel="noopener noreferrer"
+              class="proj-gh" onclick="event.stopPropagation()" aria-label="View SaanchaarSetu on GitHub">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -2210,8 +2603,8 @@
         <div>
           <div class="proj-name">
             Digital Twin Market Engine
-            <a href="https://github.com/TathagataSen06/digital-twin" target="_blank" rel="noopener noreferrer" class="proj-gh"
-              onclick="event.stopPropagation()" aria-label="View Digital Twin Market Engine on GitHub">
+            <a href="https://github.com/TathagataSen06/digital-twin" target="_blank" rel="noopener noreferrer"
+              class="proj-gh" onclick="event.stopPropagation()" aria-label="View Digital Twin Market Engine on GitHub">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -2270,8 +2663,8 @@
         <div>
           <div class="proj-name">
             SaviHer
-            <a href="https://github.com/TathagataSen06/saviher" target="_blank" rel="noopener noreferrer" class="proj-gh"
-              onclick="event.stopPropagation()" aria-label="View SaviHer on GitHub">
+            <a href="https://github.com/TathagataSen06/saviher" target="_blank" rel="noopener noreferrer"
+              class="proj-gh" onclick="event.stopPropagation()" aria-label="View SaviHer on GitHub">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -2298,7 +2691,7 @@
     <!-- ======== ACHIEVEMENTS ======== -->
     <section id="achievements" class="section section-alt">
       <div class="section-header reveal">
-        <div class="section-kicker">06 — Awards</div>
+        <div class="section-kicker">05 — Awards</div>
         <h2 class="section-title">Recognition &amp; <em>Results</em></h2>
       </div>
       <div class="ach-grid">
@@ -2340,13 +2733,14 @@
     <!-- ======== CONTACT ======== -->
     <section id="contact" class="section">
       <div class="section-header reveal">
-        <div class="section-kicker">07 — Contact</div>
+        <div class="section-kicker">06 — Contact</div>
         <h2 class="section-title">Let's build<br><em>together.</em></h2>
       </div>
       <div class="contact-grid">
         <div class="reveal">
           <a href="mailto:sen.tathagata5@gmail.com" class="contact-email">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+              aria-hidden="true">
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
@@ -2356,14 +2750,16 @@
             full-stack engineering internships for Summer 2027.</p>
           <div class="contact-items">
             <div class="contact-item">
-              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"
+                aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z" />
               </svg>
               +91 84520 34860
             </div>
             <div class="contact-item">
-              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"
+                aria-hidden="true">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
@@ -2371,19 +2767,22 @@
             </div>
           </div>
           <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="LinkedIn">
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+            <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="social-btn"
+              aria-label="GitHub">
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
-            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LeetCode">
+            <a href="https://leetcode.com/u/dedsora/" target="_blank" rel="noopener noreferrer" class="social-btn"
+              aria-label="LeetCode">
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 5.878l-2.727 2.727a1.374 1.374 0 0 0 0 1.942l2.727 2.727 5.406 5.406a1.374 1.374 0 0 0 1.942 0l2.727-2.727 5.406-5.406a1.374 1.374 0 0 0 0-1.942l-2.727-2.727L14.444.438A1.374 1.374 0 0 0 13.483 0z" />
@@ -2401,20 +2800,25 @@
             <div class="form-grp">
               <label class="form-label" for="c-name">Name *</label>
               <input class="form-input" id="c-name" type="text" placeholder="Your name" required aria-required="true">
-              <span id="name-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
+              <span id="name-error" class="form-error"
+                style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
             <div class="form-grp">
               <label class="form-label" for="c-email">Email *</label>
-              <input class="form-input" id="c-email" type="email" placeholder="your@email.com" required aria-required="true">
-              <span id="email-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
+              <input class="form-input" id="c-email" type="email" placeholder="your@email.com" required
+                aria-required="true">
+              <span id="email-error" class="form-error"
+                style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
             <div class="form-grp">
               <label class="form-label" for="c-msg">Message *</label>
-              <textarea class="form-ta" id="c-msg" placeholder="Tell me about your project or opportunity…"
-                required aria-required="true"></textarea>
-              <span id="msg-error" class="form-error" style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
+              <textarea class="form-ta" id="c-msg" placeholder="Tell me about your project or opportunity…" required
+                aria-required="true"></textarea>
+              <span id="msg-error" class="form-error"
+                style="display:none; color: var(--red); font-size: 9px; margin-top: 4px;"></span>
             </div>
-            <button type="submit" class="btn-primary" id="c-btn" style="width:100%;justify-content:center"><span id="btn-text">Send
+            <button type="submit" class="btn-primary" id="c-btn" style="width:100%;justify-content:center"><span
+                id="btn-text">Send
                 Message</span><span aria-hidden="true">→</span></button>
             <p id="form-ok" role="status" aria-live="polite"></p>
             <p id="form-error" role="alert" aria-live="polite"></p>
@@ -2428,7 +2832,8 @@
   <footer>
     <span class="footer-copy">© 2026 Tathagata Sen — Precision-built.</span>
     <div class="footer-links">
-      <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      <a href="https://github.com/TathagataSen06" target="_blank" rel="noopener noreferrer"
+        class="footer-link">GitHub</a>
       <a href="https://www.linkedin.com/in/tathagatasen05" target="_blank" rel="noopener noreferrer"
         class="footer-link">LinkedIn</a>
       <a href="mailto:sen.tathagata5@gmail.com" class="footer-link">Email</a>
@@ -2436,7 +2841,8 @@
   </footer>
 
   <button id="btt" aria-label="Back to top">
-    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+      aria-hidden="true">
       <path d="m18 15-6-6-6 6" />
     </svg>
   </button>
@@ -2575,7 +2981,7 @@
       // For now, fall back to mailto which opens the user's email client
       const subject = encodeURIComponent(`Portfolio Contact — ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
-      
+
       try {
         // Try to send via FormSubmit.co (free service) or similar
         fetch('https://formspree.io/f/mlgkonvo', {
@@ -2722,138 +3128,7 @@
       window.addEventListener('resize', resize);
     })();
 
-    // ===== ARCHITECTURE CANVAS =====
-    (function () {
-      const canvas = document.getElementById('arch-canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      let W, H;
-      function resize() {
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-      }
 
-      const NODES = [
-        { id: 'sws', label: 'Single Window\nSystem', x: .08, y: .5, color: 'rgba(196,164,92,.15)', stroke: 'rgba(196,164,92,.4)', tw: 96 },
-        { id: 'ing', label: '3-Tier\nIngestion', x: .23, y: .5, color: 'rgba(61,223,204,.08)', stroke: 'rgba(61,223,204,.5)', tw: 80 },
-        { id: 'kafka', label: 'Kafka\nStream', x: .38, y: .5, color: 'rgba(61,223,204,.08)', stroke: 'rgba(61,223,204,.5)', tw: 70 },
-        { id: 'pii', label: 'PII\nScrubber', x: .5, y: .28, color: 'rgba(196,164,92,.1)', stroke: 'rgba(196,164,92,.3)', tw: 70 },
-        { id: 'sem', label: 'Semantic\nMapper', x: .5, y: .72, color: 'rgba(61,223,204,.1)', stroke: 'rgba(61,223,204,.4)', tw: 78 },
-        { id: 'redis', label: 'Redis\nGate', x: .64, y: .5, color: 'rgba(196,164,92,.08)', stroke: 'rgba(196,164,92,.3)', tw: 60 },
-        { id: 'dept', label: '40+ Dept.\nAPIs', x: .82, y: .5, color: 'rgba(61,223,204,.1)', stroke: 'rgba(61,223,204,.5)', tw: 76 },
-        { id: 'audit', label: 'Audit\nLog', x: .64, y: .82, color: 'rgba(196,164,92,.06)', stroke: 'rgba(196,164,92,.2)', tw: 60 },
-        { id: 'dlq', label: 'DLQ\nRetry', x: .64, y: .18, color: 'rgba(196,164,92,.06)', stroke: 'rgba(196,164,92,.2)', tw: 60 },
-      ];
-
-      const EDGES = [
-        ['sws', 'ing'], ['ing', 'kafka'],
-        ['kafka', 'pii'], ['kafka', 'sem'],
-        ['pii', 'redis'], ['sem', 'redis'],
-        ['redis', 'dept'], ['redis', 'audit'], ['redis', 'dlq'],
-      ];
-
-      let packets = [];
-      let elapsed = 0;
-
-      let textColor, subTextColor, edgeColor;
-      function updateCanvasColors() {
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        textColor = isLight ? 'rgba(38,36,33,.9)' : 'rgba(240,235,224,.8)';
-        subTextColor = isLight ? 'rgba(115,110,102,.9)' : 'rgba(138,132,121,.9)';
-        edgeColor = isLight ? 'rgba(38,36,33,.15)' : 'rgba(255,248,230,.08)';
-      }
-
-      function spawnPacket() {
-        const edge = EDGES[Math.floor(Math.random() * EDGES.length)];
-        const from = NODES.find(n => n.id === edge[0]);
-        const to = NODES.find(n => n.id === edge[1]);
-        if (from && to) {
-          packets.push({
-            x: from.x * W, y: from.y * H,
-            tx: to.x * W, ty: to.y * H,
-            progress: 0, speed: .012 + Math.random() * .01,
-            color: Math.random() > .5 ? 'rgba(61,223,204,.9)' : 'rgba(196,164,92,.8)'
-          });
-        }
-      }
-
-      function drawNode(n) {
-        const x = n.x * W, y = n.y * H;
-        const bw = 104, bh = 44;
-        ctx.fillStyle = n.color;
-        ctx.strokeStyle = n.stroke;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.roundRect(x - bw / 2, y - bh / 2, bw, bh, 3);
-        ctx.fill(); ctx.stroke();
-        ctx.fillStyle = textColor;
-        ctx.font = 'bold 10px "DM Mono", monospace';
-        ctx.textAlign = 'center';
-        const lines = n.label.split('\n');
-        if (lines.length === 2) {
-          ctx.fillText(lines[0], x, y - 6);
-          ctx.fillStyle = subTextColor;
-          ctx.font = 'bold 9px "DM Mono", monospace';
-          ctx.fillText(lines[1], x, y + 8);
-        } else {
-          ctx.fillText(n.label, x, y + 4);
-        }
-      }
-
-      function drawEdge(from, to) {
-        const fx = from.x * W, fy = from.y * H, tx = to.x * W, ty = to.y * H;
-        ctx.beginPath();
-        ctx.moveTo(fx + 52, fy);
-        const mx = (fx + tx) / 2;
-        ctx.bezierCurveTo(mx, fy, mx, ty, tx - 52, ty);
-        ctx.strokeStyle = edgeColor;
-        ctx.lineWidth = 1;
-        ctx.setLineDash([4, 8]);
-        ctx.stroke();
-        ctx.setLineDash([]);
-      }
-
-      function draw(ts) {
-        updateCanvasColors();
-        ctx.clearRect(0, 0, W, H);
-        elapsed = ts;
-
-        // edges
-        EDGES.forEach(([a, b]) => {
-          const fn = NODES.find(n => n.id === a), tn = NODES.find(n => n.id === b);
-          if (fn && tn) drawEdge(fn, tn);
-        });
-
-        // nodes
-        NODES.forEach(drawNode);
-
-        // packets
-        packets = packets.filter(p => {
-          p.progress += p.speed;
-          if (p.progress >= 1) return false;
-          const t = p.progress;
-          const px = p.x * (1 - t) + p.tx * t;
-          const py = p.y * (1 - t) + p.ty * t;
-          ctx.beginPath();
-          ctx.arc(px, py, 3, 0, Math.PI * 2);
-          ctx.fillStyle = p.color;
-          ctx.fill();
-          // glow
-          ctx.beginPath();
-          ctx.arc(px, py, 6, 0, Math.PI * 2);
-          ctx.fillStyle = p.color.replace(')', ',0.2)').replace('rgba(', 'rgba(');
-          ctx.fill();
-          return true;
-        });
-
-        if (Math.random() < .04) spawnPacket();
-        requestAnimationFrame(draw);
-      }
-
-      resize();
-      requestAnimationFrame(draw);
-      window.addEventListener('resize', () => { resize(); });
-    })();
 
     // Theme Toggling Logic
     const themeToggles = document.querySelectorAll('.theme-toggle');
